@@ -1,0 +1,36 @@
+﻿@model IEnumerable<LAB5_HUYNHHUUNGHIA.Models.Chuyennganh>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-light">Quản lí chuyên ngành</h1>
+
+<p>
+    <a asp-action="Create" class="">Tạo mới chuyên ngành</a>
+</p>
+<table class="table text-light">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TenCn)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenCn)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaCn">Chỉnh sửa</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaCn">Chi tiết</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MaCn">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

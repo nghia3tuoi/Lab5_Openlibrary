@@ -1,0 +1,33 @@
+﻿@model LAB5_HUYNHHUUNGHIA.Models.Chuyennganh
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Thêm mới chuyên ngành</h1>
+
+<h4 class="text-light">Chuyên ngành</h4>
+<hr />
+<div class="row text-light">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TenCn" class="control-label">Tên chuyên ngành</label>
+                <input asp-for="TenCn" class="form-control" />
+                <span asp-validation-for="TenCn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Tạo" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Trở về trước</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

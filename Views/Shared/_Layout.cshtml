@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - LAB5_HUYNHHUUNGHIA</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/scss/StyleSheet.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LAB5_HUYNHHUUNGHIA.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container">
+        <!--Inspired from Themeforest Template-->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <div class="sidebar">
+            <h1><i class="fa fa-bars push"></i>Animated <span class="color"><strong>Nav</strong></span></h1>
+            <ul>
+                <li>
+                    <a href="#"><i class="fa fa-dashboard push"></i>Home<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-user push"></i>About<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+                    <ul class="sub-menu">
+                        <li><a href="#">Add User<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                        <li><a href="#">Manage Users<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-cog push"></i>Services<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+                    <ul class="sub-menu">
+                        <li><a href="#">Web Design<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                        <li><a href="#">Logo Design<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                        <li><a href="#">Motion Graphics<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                        <li><a href="#">WordPress<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-picture-o push"></i>portfolio<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">Selected Works<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+                        </li>
+                        <li><a href="#">Featured Works<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-file push"></i>My Blog<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">Latest News<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+                        </li>
+                        <li><a href="#">Recent Articles<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-plane push"></i>Contact<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+            </ul>
+        </div>
+        <div class="portfolio">
+            <div> @RenderBody()</div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
